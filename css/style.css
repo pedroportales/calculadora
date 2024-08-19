@@ -1,0 +1,76 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2e3440; /* Cor de fundo */
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 250px;
+    background: #3b4252; /* Cor de fundo da calculadora */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.display {
+    background: #2e3440; /* Cor de fundo da tela */
+    color: #d8dee9; /* Cor do texto */
+    padding: 20px;
+    font-size: 2em;
+    text-align: right;
+    border-bottom: 2px solid #4c566a; /* Linha abaixo da tela */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+
+.button {
+    background: #4c566a; /* Cor dos botões */
+    color: #d8dee9; /* Cor do texto dos botões */
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #3b4252; /* Cor ao passar o mouse */
+}
+
+.button.operator {
+    background: #81a1c1; /* Cor dos botões de operador */
+}
+
+.button.operator:hover {
+    background: #88c0d0; /* Cor dos botões de operador ao passar o mouse */
+}
+
+.button.clear {
+    background: #bf616a; /* Cor do botão de limpar */
+}
+
+.button.clear:hover {
+    background: #d08770; /* Cor do botão de limpar ao passar o mouse */
+}
+
+.button.equal {
+    background: #a3be8c; /* Cor do botão de igual */
+    grid-column: span 4; /* Ocupa toda a linha */
+}
+
+.button.equal:hover {
+    background: #b4bf8c; /* Cor do botão de igual ao passar o mouse */
+}
